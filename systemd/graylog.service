@@ -1,0 +1,15 @@
+[Unit]
+Description=Graylog Docker service
+Requires=docker.service
+After=docker.service
+
+[Service]
+RemainAfterExit=yes
+WorkingDirectory=/etc/docker-compose/graylog
+ExecStart=/bin/docker-compose up
+ExecStop=/bin/docker-compose down
+TimeoutStartSec=0
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

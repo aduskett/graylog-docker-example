@@ -1,0 +1,4 @@
+cluster.name: elasticsearch-infra-graylog
+path.data: /mnt/es-data-storage
+http.port: 9200
+discovery.zen.ping.unicast.hosts: ["10.10.6.161", "10.10.5.90"]
